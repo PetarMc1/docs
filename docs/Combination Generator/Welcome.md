@@ -17,14 +17,15 @@ the script saves the unique combinations to a text file. Each file is named afte
 
 ## Ways of using the generator
 
+:::warning
+Using the executable file is NOT RECOMMENDED. Prefer using the [script](https://github.com/PetarMc1/combination-generator/tree/v1.0.0) or the [online tool](https://tools.petarmc.com/combination-generator/)
+:::
+
+
 1. [Run the script](getting-started/running-the-script)
 
 
 2. Use an executable (`.exe`) file
 
-:::warning
-Using the executable file is NOT RECOMMENDED. Prefer using the [script](https://github.com/PetarMc1/combination-generator/tree/v1.0.0)
-:::
 
-
-1. Use in a website (Coming soon)
+3. Use the [online tool](https://tools.petarmc.com/combination-generator/)
