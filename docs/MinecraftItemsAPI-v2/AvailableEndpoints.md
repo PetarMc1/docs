@@ -1,6 +1,7 @@
 ---
 slug: /api/available-endpoints
 description: All Available Endpoints
+sidebar_label: Available Endpoints
 ---
 
 :::warning

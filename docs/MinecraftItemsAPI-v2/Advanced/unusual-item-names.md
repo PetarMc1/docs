@@ -1,6 +1,7 @@
 ---
 slug: /api/advanced/unusual-names
-
+description: Naming Differences for Versions Lower than 1.12
+sidebar_label: Unusual Item Names
 ---
 
 :::warning
@@ -9,11 +10,11 @@ This project has reached end of life and is no longer supported.
 
 # Naming Differences for Versions Lower than 1.12
 
-When working with versions of Minecraft prior to 1.12, it's important to note that there are items with names that are diffrent from their display names. This discrepancy can sometimes lead to confusion when querying data or interacting with plugins and mods.
+When working with versions of Minecraft prior to 1.12, it's important to note that there are items with names that are different from their display names. This discrepancy can sometimes lead to confusion when querying data or interacting with plugins and mods.
 
-You can see a full file with all of this items [here](https://github.com/PetarMc1/Minecraft-Items-API-v2/blob/master/Unusual%20Names.%2Cmd)
+You can see a full file with all of this items [here](https://github.com/PetarMc1/Minecraft-Items-API-v2/blob/master/Unusual%20Names.md)
 
-Some exaples for items like this:
+Some examples for items like this:
 
 ### 1.9
 

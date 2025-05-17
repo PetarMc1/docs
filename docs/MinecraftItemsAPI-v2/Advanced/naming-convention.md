@@ -1,6 +1,7 @@
 ---
 slug: /api/advanced/naming-convention
 sidebar_label: Naming Convention
+description: Naming conventions you need to know
 ---
 
 :::warning
