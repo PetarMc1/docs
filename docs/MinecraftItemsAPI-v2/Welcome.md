@@ -12,7 +12,7 @@ This project has reached end of life and is no longer supported.
 The API is designed to retrieve information for Minecraft blocks and items.
 
 ## How to Use
-To get started, simply make HTTP requests to one of the [endpoints](/api/available-endpoints). Alternatively, you can use the [user-friendly UI](https://api.petarmc.com)
+To get started, simply make HTTP requests to one of the [endpoints](/api/available-endpoints). Alternatively, you can use the [user-friendly UI](https://mc-api.petarmc.com)
 
 ## Supported Versions
 
