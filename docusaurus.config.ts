@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Petar_mc Docs",
   tagline: "",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo2.ico",
 
   future: {
     v4: true,
@@ -44,7 +44,7 @@ const config: Config = {
     navbar: {
       title: "Petar_mc Docs",
       logo: {
-        src: "img/logo.svg",
+        src: "https://assets.petarmc.com/images/logo.svg",
       },
       items: [
         {
