@@ -20,7 +20,7 @@ These settings are mandatory for the mod to function:
 
 - **Username**: Enter your username.
 - **Password**: Your account password for API authentication.
-- **API Key**: To obtain an API key check the [Request Access](../../getting-started#request-access) page.
+- **API Key**: To obtain an API key check the [Request Access](../getting-started.md#request-access) page.
 - **Endpoint URL**: The API endpoint URL (default: `https://api.tracker.petarmc.com`).
 
 :::caution

@@ -19,11 +19,6 @@ const config: Config = {
   organizationName: "PetarMc1",
   projectName: "docs",
   onBrokenLinks: "throw",
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-  },
-
   presets: [
     [
       "classic",

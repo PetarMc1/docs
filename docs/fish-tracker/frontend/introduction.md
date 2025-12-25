@@ -12,7 +12,7 @@ The **CosmosMC Fish Tracker** frontend is a web app built with **Next.js** and *
 This frontend documentation is organized into focused sections:
 
 - **[Architecture](architecture.md)** - Core technologies, application structure, and technical implementation
-- **[Development](development.md)** - Setup instructions, build process, and development workflow
+- **[Development and deployment](development-and-deployment.md)** - Setup instructions, development workflow, and deployment options
 
 ## Core Technologies
 

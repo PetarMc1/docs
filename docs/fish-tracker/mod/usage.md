@@ -23,7 +23,7 @@ FishTracker monitors chat messages for fish catch notifications. When you catch 
 
 ## Supported Fish Types
 
-See the [fish rarity mappings](../rarity-mappings).
+See the [fish rarity mappings](./../rarity-tiers.md).
 
 ## Viewing Your Data
 

@@ -8,7 +8,7 @@ sidebar_label: Minecraft Items API v2 docs
 The API is designed to retrieve information for Minecraft blocks and items.
 
 ## How to Use
-To get started, simply make HTTP requests to one of the [endpoints](/api/available-endpoints). Alternatively, you can use the [user-friendly UI](https://mc-api.petarmc.com)
+To get started, simply make HTTP requests to one of the [endpoints](./available-endpoints.md). Alternatively, you can use the [user-friendly UI](https://mc-api.petarmc.com)
 
 ## Supported Versions
 
