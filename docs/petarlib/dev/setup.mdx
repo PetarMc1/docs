@@ -1,0 +1,85 @@
+---
+title: Setup
+sidebar_label: Setup
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Setup
+
+This page covers the technical setup for using PetarLib in your Fabric mod project.
+
+## Gradle
+
+<Tabs>
+  <TabItem value="groovy" label="Groovy DSL">
+
+Add the PetarMc Maven repository and the dependency in your `build.gradle`:
+
+```groovy title="build.gradle"
+repositories {
+    maven {
+        url "https://maven.petarmc.com/releases"
+    }
+}
+
+dependencies {
+    modImplementation "com.petarmc:PetarLib:x.x.x"
+    // Include other dependencies
+}
+```
+
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin DSL">
+
+Add the PetarMc Maven repository and the dependency in your `build.gradle.kts`:
+
+```kotlin title="build.gradle.kts"
+repositories {
+    maven("https://maven.petarmc.com/releases")
+}
+
+dependencies {
+    modImplementation("com.petarmc:PetarLib:x.x.x")
+    // Include other dependencies
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Maven
+
+Add the PetarMc Maven repository and the dependency in your `pom.xml`:
+
+```xml title="pom.xml"
+<reositories>
+    <repository>
+        <id>petarmc</id>
+        <url>https://maven.petarmc.com/releases</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.petarmc</groupId>
+        <artifactId>PetarLib</artifactId>
+        <version>x.x.x</version>
+        <scope>provided</scope>
+    </dependency>
+    <!-- Include other dependencies -->
+</dependencies>
+```
+
+## Fabric Mod JSON
+
+Ensure your `fabric.mod.json` includes PetarLib as a dependency:
+
+```json title="fabric.mod.json"
+{
+  "depends": {
+    "petarlib": "*"
+  }
+}
+```
