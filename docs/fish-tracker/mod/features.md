@@ -18,7 +18,7 @@ Fish caught in mythical waters are not being tracked due to the format of the ch
 - Supports various fish rarities.
 
 :::warning 
-New Entry Detection might not work since new cosmosmc fish changes. A fix might not be available!
+New Entry Detection was fixed in version [v1.0.5](https://github.com/PetarMc1/fish-tracker-mod/releases/tag/1.0.5) of the mod! It sends the fish rarity with the name in versons v1.0.4 and below, causing new entry fish to have their rarity in the name too. So instad of `Koi` it sends `Bronze Koi`.
 :::
 
 ### New Entry Detection
