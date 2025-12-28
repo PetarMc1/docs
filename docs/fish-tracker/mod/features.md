@@ -16,8 +16,6 @@ Fish caught in mythical waters are not being tracked due to the format of the ch
 ### Automatic Fish Tracking
 - Parses chat messages in real-time to detect fish catches.
 - Supports various fish rarities.
-- Tracks catch timestamps and locations (if available).
-
 
 :::warning 
 New Entry Detection might not work since new cosmosmc fish changes. A fix might not be available!
