@@ -9,6 +9,10 @@ FishTracker offers a range of features.
 
 ## Core Features
 
+:::warning
+Fish caught in mythical waters are not being tracked due to the format of the chat message. (`MYTHICAL WATERS! You caught a Moonshade Snapper!` - it doesnt spacify rarity) A fix might not be available! on the mod side.
+:::
+
 ### Automatic Fish Tracking
 - Parses chat messages in real-time to detect fish catches.
 - Supports various fish rarities.
