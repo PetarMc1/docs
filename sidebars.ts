@@ -47,6 +47,7 @@ const sidebars: SidebarsConfig = {
         "petarlib/dev/chat",
         "petarlib/dev/net",
         "petarlib/dev/task",
+        "petarlib/dev/notifications",
       ],
     },
   ],
