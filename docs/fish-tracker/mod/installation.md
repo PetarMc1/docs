@@ -17,6 +17,12 @@ Before installing FishTracker, ensure you have the following mods installed:
 
 ## Installation Steps
 
+:::note Download options
+Modrinth is coming soon! <br/>
+You can download development builds for each commit from the [CI](https://ci.petarmc.com/job/Fish Tracker Mod/)
+:::
+
+
 1. Download the latest FishTracker jar file from [Modrinth](https://modrinth.com/mod/fish-tracker-mod) or the [Releases](https://github.com/PetarMc1/fish-tracker-mod/releases) page.
 2. Locate your Minecraft mods folder:
    - Windows: `%APPDATA%\.minecraft\mods`
