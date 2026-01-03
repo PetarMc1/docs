@@ -9,7 +9,7 @@ PetarLib provides a utility class for displaying in-game notifications to the pl
 
 ## Overview
 
-The `NotificationManager` class allows you to send formatted messages to the player's chat. It supports different types of notifications (error, info) and automatically prefixes messages using the global log prefix from [`LogConfig`](dev/logging.md).
+The `NotificationManager` class allows you to send formatted messages to the player's chat. It supports different types of notifications (error, info) and automatically prefixes messages using the global log prefix from [`LogConfig`](./logging).
 
 :::note
 This class only works on the client side.
