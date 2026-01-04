@@ -35,3 +35,11 @@ The built jar file will be located in `build/libs/`:
 ## Running in Development
 
 If you are using IntelliJ IDEA, when you initialize the project there will be an option to run the mod in a Minecraft client for testing.
+
+## Jenkins Builds
+
+If you prefer not to build from source but you need latest commit builds you can download pre-built jars from the Jenkins server.
+
+1. Visit the [Fish Tracker Mod Jenkins page](https://ci.petarmc.com/job/Fish%20Tracker%20Mod/).
+2. Download the jar files from the latest artifacts.
+3. Use these jars directly in your mods folder, similar to the installation instructions.
