@@ -19,7 +19,7 @@ Before installing FishTracker, ensure you have the following mods installed:
 
 :::note Download options
 Modrinth is coming soon! <br/>
-You can download development builds for each commit from the [CI](https://ci.petarmc.com/job/Fish Tracker Mod/)
+You can download development builds for each commit from the [CI](https://ci.petarmc.com/job/Fish%20Tracker%20Mod/)
 :::
 
 
