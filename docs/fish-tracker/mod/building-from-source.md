@@ -27,6 +27,18 @@ Use the included Gradle wrapper to build:
 ./gradlew build
 ```
 
+## Building All Versions
+
+To build FishTracker for all supported Minecraft versions, use the `buildAllVersions` command:
+
+```bash
+./gradlew buildAllVersions
+# or
+gradlew.bat buildAllVersions
+```
+
+This task builds the mod for the default Minecraft version and all versions defined in the `props/` directory. The output jars will be placed in `build/libs/` with names like `FishTracker-mc{version}-v{modVersion}.jar`.
+
 ## Output
 
 The built jar file will be located in `build/libs/`:
