@@ -102,3 +102,39 @@ docker run -d \
    -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
    petarmc/fish-tracker:backend
 ```
+
+### Development Docker Images
+
+Download from [Jenkins](https://ci.petarmc.com/job/Fish%20Tracker/)
+
+```bash
+curl -o backend-docker.tar.gz https://ci.petarmc.com/job/Fish%20Tracker/10/artifact/backend-docker-X.tar.gz
+```
+
+On target machine, load into Docker:
+
+```bash
+gzip -d backend-docker.tar.gz
+docker load -i backend-docker.tar
+```
+
+Or directly without unzipping:
+
+```bash
+gunzip -c backend-docker.tar.gz | docker load
+```
+
+Run containers:
+
+```bash
+docker run -d \
+   --name backend \
+   -p 10000:10000 \
+   --restart unless-stopped \
+   -e MONGO_URI="mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb" \
+   -e RANDOM_ORG_API_KEY="random-org-api-key" \
+   -e FRONTEND_API_KEY="frontend-api-key" \
+   -e JWT_SECRET="your-super-secret-jwt-token" \
+   -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
+   petarmc/fish-tracker-backend:X
+```
