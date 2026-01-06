@@ -33,12 +33,14 @@ Before installing, ensure you have the following:
 3. **Create environment file**:
    Create a `.env` file in the backend root directory with the following variables:
    ```env
-   MONGO_URI=mongodb://localhost:27017/fish-tracker
-   PORT=10000
+   MONGO_URI=mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb
+   PORT=10000 # optional otherwise defaults to 10000
+   RANDOM_ORG_API_KEY=your-random-org-api-key
    JWT_SECRET=your-super-secret-jwt-key
    FRONTEND_API_KEY=your-frontend-api-key
-   ALLOWED_ORIGIN=https://your-frontend-domain.com
-   ADMIN_JWT_SECRET=your-admin-jwt-secret
+   ALLOWED_ORIGIN=https://your-frontend-domain.com # optional otherwise will use https://tracker.petarmc.com
+   RATE_LIMIT_WINDOW=5  # optional otherwise defaults to 5 minutes
+   RATE_LIMIT_MAX_REQUESTS=25   # optional otherwise defaults to 25 requests per window
    ```
 
 :::caution
@@ -72,7 +74,7 @@ Create `docker-compose.yml`:
 version: "3.9"
 
 services:
-   fish-tracker:
+   fish-tracker-backend:
       image: petarmc/fish-tracker-backend:1.x.x
       ports:
          - "10000:10000"
@@ -81,7 +83,10 @@ services:
          RANDOM_ORG_API_KEY: "random-org-api-key"
          FRONTEND_API_KEY: "frontend-api-key"
          JWT_SECRET: "your-super-secret-jwt-token"
-         ALLOWED_ORIGIN: "https://your-frontend-domain.com"
+         ALLOWED_ORIGIN: "https://your-frontend-domain.com" # optional
+         RATE_LIMIT_WINDOW: 5  # optional otherwise defaults to 5 minutes
+         RATE_LIMIT_MAX_REQUESTS: 25   # optional otherwise defaults to 25 requests per window
+         PORT: 10000  # optional, if you change it here, change the port mapping above too
       restart: unless-stopped
 
 ```
@@ -93,14 +98,18 @@ docker compose up -d
 ### Docker Run Command 
 ```bash
 docker run -d \
-   --name fish-tracker \
+   --name fish-tracker-backend \
    -p 10000:10000 \
    -e MONGO_URI="mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb" \
    -e RANDOM_ORG_API_KEY="random-org-api-key" \
    -e FRONTEND_API_KEY="frontend-api-key" \
    -e JWT_SECRET="your-super-secret-jwt-token" \
-   -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
-   petarmc/fish-tracker:backend
+   # -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
+   # -e PORT=10000 \
+   # -e RATE_LIMIT_WINDOW=5 \
+   # -e RATE_LIMIT_MAX_REQUESTS=25 \
+   --restart unless-stopped \
+   petarmc/fish-tracker-backend:1.x.x
 ```
 
 ### Development Docker Images
@@ -128,13 +137,16 @@ Run containers:
 
 ```bash
 docker run -d \
-   --name backend \
+   --name fish-tracker-backend-dev \
    -p 10000:10000 \
-   --restart unless-stopped \
    -e MONGO_URI="mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb" \
    -e RANDOM_ORG_API_KEY="random-org-api-key" \
    -e FRONTEND_API_KEY="frontend-api-key" \
    -e JWT_SECRET="your-super-secret-jwt-token" \
-   -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
+   # -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
+   # -e PORT=10000 \
+   # -e RATE_LIMIT_WINDOW=5 \
+   # -e RATE_LIMIT_MAX_REQUESTS=25 \
+   --restart unless-stopped \
    petarmc/fish-tracker-backend:X
 ```
