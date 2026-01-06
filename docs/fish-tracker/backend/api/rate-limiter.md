@@ -1,9 +1,9 @@
 ---
-title: Rate Limiting
-sidebar_label: Rate Limiting
+title: Rate Limiter
+sidebar_label: Rate Limiter
 ---
 
-# Rate Limiting
+# Rate Limiter
 
 The Fish Tracker API implements rate limiting to ensure fair usage and protect against abuse. This document explains how rate limiting works, how to bypass it. Rate limiting is applied to all [public endpoints](./public).
 
@@ -84,16 +84,8 @@ When the rate limit is exceeded, the API returns:
 
 ## Configuration
 
-### Environment Variables
+Rate limiting can be configured via the [environment variables](../installation-and-deployment#environment-setup):
 
-Rate limiting can be configured via environment variables:
-
-```env
-# Rate limiting configuration (if using custom middleware)
-RATE_LIMIT_WINDOW_MS=300000  # 5 minutes in milliseconds
-RATE_LIMIT_MAX_REQUESTS=25   # Max requests per window
-FRONTEND_API_KEY=your-key    # API key for bypass
-```
 
 ## Why is Rate Limiting Important in this situation?
 
