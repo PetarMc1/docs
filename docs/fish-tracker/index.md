@@ -47,9 +47,9 @@ A desktop application that monitors Minecraft Lunar Client logs in real-time, de
 
 ## Key Features
 
-- **Multi-Gamemode Support**: Compatible with OneBlock, Earth, Survival, and Factions
+- **Multi-Gamemode Support**: Compatible with OneBlock, Earth, Survival, Factions and BoxSMP
 - **Rarity System**: Fish categorized by Bronze, Silver, Gold, Diamond, Platinum, and Mythical rarities
-- **Real-time Tracking**: Live monitoring of catches through log analysis
-- **Secure Data Transmission**: Encrypted communication between components
+- **Real-time Tracking**: Live monitoring of catches through log analysis (Desktop App)
+- **Secure Data Transmission**: Encrypted communication between components (Desktop App/Mod to Backend)
 - **Comprehensive Analytics**: Detailed statistics and visualization tools
 - **Admin Panel**: Full administrative controls for system management
