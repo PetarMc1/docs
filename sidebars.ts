@@ -124,6 +124,13 @@ const sidebars: SidebarsConfig = {
     "fish-tracker/mod/building-from-source",
     "fish-tracker/mod/dependencies",
   ],
+
+  durationParser: [
+    "duration-parser/index",
+    "duration-parser/installation",
+    "duration-parser/usage",
+    "duration-parser/examples",
+  ],
 };
 
 export default sidebars;

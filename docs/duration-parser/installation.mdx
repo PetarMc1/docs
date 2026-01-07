@@ -1,0 +1,148 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Installation
+
+Duration Parser is available on Maven Central and Petar_mc's [Maven repository](https://maven.petarmc.com).
+
+:::tip
+Personally, I recommend using the Maven Central repository for stable releases.
+:::
+
+<Tabs>
+  <TabItem value="maven" label="Maven" default>
+
+
+## Maven Central
+
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.petarmc</groupId>
+    <artifactId>duration-parser</artifactId>
+    <version>1.x.x</version>
+</dependency>
+```
+
+
+
+        <Tabs>
+          <TabItem value="releases" label="Releases">
+
+## Releases
+
+```xml
+<reositories>
+    <repository>
+        <id>petarmc-releases</id>
+        <url>https://maven.petarmc.com/releases</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.petarmc</groupId>
+        <artifactId>duration-parser</artifactId>
+        <version>1.x.x</version>
+    </dependency>
+</dependencies>
+```
+
+          </TabItem>
+          <TabItem value="snapshots" label="Snapshots">
+
+## Snapshots
+
+```xml
+<reositories>
+    <repository>
+        <id>petarmc-snapshots</id>
+        <url>https://maven.petarmc.com/snapshots</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.petarmc</groupId>
+        <artifactId>duration-parser</artifactId>
+        <version>1.x.x-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+```
+
+          </TabItem>
+        </Tabs>
+
+
+  </TabItem>
+  <TabItem value="gradle" label="Gradle">
+
+    <Tabs>
+      <TabItem value="groovy" label="Groovy DSL">
+
+## Groovy DSL
+
+For Gradle projects using Groovy DSL, add to your `build.gradle`:
+
+```groovy
+repositories {
+    mavenCentral()
+    // releases repository
+    maven {
+    name "petarmcReleases"
+    url "https://maven.petarmc.com/releases"
+    }
+
+    // snapshots repository
+    maven {
+    name "petarmcSnapshots"
+    url "https://maven.petarmc.com/snapshots"
+    }
+
+}
+
+
+dependencies {
+    implementation 'com.petarmc:duration-parser:1.x.x'
+}
+```
+
+      </TabItem>
+      <TabItem value="kotlin" label="Kotlin DSL">
+
+## Kotlin DSL
+
+For Gradle projects using Kotlin DSL, add to your `build.gradle.kts`:
+
+```kotlin
+repositories {
+    mavenCentral()
+    // releases repository
+    maven {
+    name = "petarmcReleases"
+    url = uri("https://maven.petarmc.com/releases")
+    }
+
+    // snapshots repository
+    maven {
+    name = "petarmcSnapshots"
+    url = uri("https://maven.petarmc.com/snapshots")
+    }
+}
+
+dependencies {
+    implementation("com.petarmc:duration-parser:1.x.x") // Replace with latest version
+}
+```
+
+      </TabItem>
+    </Tabs>
+
+  </TabItem>
+</Tabs>
+
+## Requirements
+
+- Java 17 or higher
+- No additional dependencies required

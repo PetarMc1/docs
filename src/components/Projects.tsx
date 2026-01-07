@@ -29,6 +29,12 @@ const projects: Project[] = [
     repo: "PetarMc1/minecraft-items-api-v2",
     link: "/mc-api",
   },
+    {
+    title: "Duration Parser",
+    description: "Documentation for the Duration Parser project.",
+    repo: "PetarMc1/duration-parser",
+    link: "/duration-parser",
+  },
 ];
 
 function Project(project: Project) {
