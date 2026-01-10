@@ -25,10 +25,10 @@ For more details, see the [Installation](installation.md) guide.
 
 Explore the API for each module:
 
-- [Logging](dev/logging.md)
-- [Chat Pattern Matching](dev/chat.md)
-- [HTTP Client](dev/net.md)
-- [Task Scheduling](dev/task.md)
-- [Notifications](dev/notifications.md)
+- [Logging](development/logging.md)
+- [Chat Pattern Matching](development/chat.md)
+- [HTTP Client](development/net.md)
+- [Task Scheduling](development/task.md)
+- [Notifications](development/notifications.md)
 
 For detailed API documentation, see the [Javadocs](https://jd.petarmc.com).
