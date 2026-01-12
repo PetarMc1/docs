@@ -53,6 +53,20 @@ LogConfig.includeTimestamp = true;
 LogConfig.includeThread = false;
 ```
 
+## Message Format
+The log message format is:
+```
+[LogLevel] [GlobalPrefix] [Thread] message
+```
+where `[Thread]` is included if `includeThread` is true.
+ 
+:::caution
+For versions below `v1.3.0` the config message is 
+```
+[GlobalPrefix] [LogLevel] [Thread] [PloggerName] message
+```
+:::
+
 ## Log Levels
 
 - **DEBUG**: Detailed information for developers.

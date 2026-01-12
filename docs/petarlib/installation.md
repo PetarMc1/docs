@@ -17,3 +17,7 @@ Also you can download development builds for each commit from [CI](https://ci.pe
 2. Locate your Minecraft installation folder.
 3. Place the downloaded `.jar` file into the `mods` folder.
 4. Launch Minecraft with Fabric.
+
+## ModMenu Support
+
+PetarLib provides simple ModMenu support.
