@@ -9,7 +9,7 @@ PetarLib provides a utility class for displaying in-game notifications to the pl
 
 ## Overview
 
-The `NotificationManager` class allows you to send formatted messages to the player's chat. It supports different types of notifications (error, info) and automatically prefixes messages using the global log prefix from [`LogConfig`](./logging).
+The `NotificationManager` class allows you to send formatted messages to the player's chat. It supports different types of notifications (error, info) and no longer reads a global log prefix; callers must supply a prefix string (may be empty) when using the convenience methods.
 
 :::note
 This class only works on the client side.
@@ -20,7 +20,7 @@ This class only works on the client side.
 ### Showing Error Notifications
 
 ```java
-NotificationManager.showError("An error occurred while processing your request.");
+NotificationManager.showError("An error occurred while processing your request.", "Prefix");
 ```
 
 This will display: `[Prefix] An error occurred while processing your request.` in red color.
@@ -28,7 +28,7 @@ This will display: `[Prefix] An error occurred while processing your request.` i
 ### Showing Info Notifications
 
 ```java
-NotificationManager.showInfo("Mod loaded successfully.");
+NotificationManager.showInfo("Mod loaded successfully.", "Prefix");
 ```
 
 This will display: `[Prefix] Mod loaded successfully.` in white color.
@@ -39,34 +39,29 @@ This will display: `[Prefix] Mod loaded successfully.` in white color.
 NotificationManager.showChatMessage("§aCustom green message");
 ```
 
-This allows you to send any formatted message directly to chat.
+This allows you to send any formatted message directly to chat. 
+:::caution
+`showChatMessage` does not add any prefix; use the methods (`showError`/`showInfo`) when you want the library to add prefix and default coloring.
+:::
 
 ## Configuration
 
-The notification prefix is automatically taken from [`LogConfig.globalPrefix`](https://jd.petarmc.com/petarlib/1.2.2/com/petarmc/lib/log/LogConfig#globalPrefix). If no prefix is set, the brackets are omitted.
+:::note
+NotificationManager no longer reads `LogConfig.globalPrefix`. Callers must provide a prefix string to the methods (the library will remove any surrounding characters and display the prefix in square brackets). If you do not want a prefix, pass an empty string `""`.
 
-Example:
-- If [`LogConfig.globalPrefix`](https://jd.petarmc.com/petarlib/1.2.2/com/petarmc/lib/log/LogConfig#globalPrefix) is `"[MyMod]"`, notifications will be prefixed with `[MyMod]`.
-- If no prefix is set, notifications appear without brackets.
+Examples:
+- `NotificationManager.showInfo("Ready", "MyMod")` displays `§e[MyMod] §fReady`.
+- `NotificationManager.showInfo("Ready", "")` displays `Ready` (no brackets and prefix).
+:::
 
+For more information on configuring logging, see the [Javadocs](./javadocs.md).
 
-### `showError(String message)`
+## Color codes used by the methods
 
-Displays an error notification in red text.
+- Prefix is shown in yellow: `§e` (displayed as `§e[Prefix]`)
+- Error messages use red: `§c`
+- Info messages use white: `§f`
 
-**Parameters:**
-- `message`: The error message to display
-
-### `showInfo(String message)`
-
-Displays an info notification in white text.
-
-**Parameters:**
-- `message`: The info message to displays
-
-### `showChatMessage(String message)`
-
-Displays a custom message in chat. Supports Minecraft formatting codes.
-
-**Parameters:**
-- `message`: The message to display (can include formatting codes like §a, §c, etc.)
+:::tip
+When using `showChatMessage` you can add color codes (e.g., `§a` for green, `§c` for red). To see the full list of Minecraft color codes, refer to the [Minecraft Color Codes](https://minecraftitemids.com/color-codes#color-codes).
+:::

@@ -38,7 +38,9 @@ logger.error("Error with exception", exception);
 ```
 
 ### Configuration
-
+:::note
+`LogConfig.globalPrefix` has been removed in `v1.3.1`. It now uses prefixes per logger instead.
+:::
 Configure logging globally via `LogConfig`:
 
 ```java
@@ -48,7 +50,6 @@ import com.petarmc.lib.log.LogLevel;
 LogConfig.globalLevel = LogLevel.DEBUG;
 LogConfig.logToFile = true;
 LogConfig.logFilePath = "mymod.log";
-LogConfig.globalPrefix = "[MyMod]";
 LogConfig.includeTimestamp = true;
 LogConfig.includeThread = false;
 ```
@@ -56,12 +57,12 @@ LogConfig.includeThread = false;
 ## Message Format
 The log message format is:
 ```
-[LogLevel] [GlobalPrefix] [Thread] message
+[LogLevel] [LoggerPrefix] [Thread] message
 ```
-where `[Thread]` is included if `includeThread` is true.
- 
+where `[Thread]` is included if `includeThread` is true and `LoggerPrefix` is provided when constructing the logger.
+
 :::caution
-For versions below `v1.3.0` the config message is 
+For versions below `v1.3.0` the config message format used a global prefix and a diffrent order:
 ```
 [GlobalPrefix] [LogLevel] [Thread] [PloggerName] message
 ```
