@@ -83,3 +83,22 @@ Ensure your `fabric.mod.json` includes PetarLib as a dependency:
   }
 }
 ```
+
+
+## Running tests
+
+Unit tests are configured with Jupiter
+
+- Run the tests:
+```bash
+.\gradlew test
+```
+
+- Run a single test class or method:
+```bash
+.\gradlew --tests com.petarmc.lib.chat.ChatPatternMatcherTest test
+```
+
+Test reports will be generated after a test run at:
+- HTML report: `build/reports/tests/test/index.html`
+- Raw results: `build/test-results/test/`
