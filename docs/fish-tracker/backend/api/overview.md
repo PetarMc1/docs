@@ -46,3 +46,4 @@ Currently the API supports the following gamemodes:
 - `earth`
 - `survival`
 - `factions`
+- `boxsmp`
