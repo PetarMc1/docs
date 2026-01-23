@@ -19,6 +19,10 @@ The Fish Tracker API implements rate limiting to ensure fair usage and protect a
 - **Requirements**: Valid `x-api-key` header
 - **Scope**: All [public endpoints](./public)
 
+:::note
+Requests coming from configured allowed origins also bypass rate limiting. Only add trusted origins to this list!
+:::
+
 ### Admin Endpoints
 - **Limit**: Separate rate limiting applied
 - **Requirements**: JWT authentication
@@ -41,6 +45,8 @@ X-RateLimit-Reset: 1640995200  // Unix timestamp when limit resets
 
 To bypass rate limiting, you need a valid API key. To obtain an API key check the [Request Access](../../getting-started#request-access) page.
 
+Each user is issued their own API key for bypassing public endpoint limits. In addition, the platform has a single master key - `MASTER_API_KEY` which provides global bypass.
+
 ### Using the API Key
 
 Include the `x-api-key` header in your requests:
@@ -62,7 +68,7 @@ fetch('https://api.tracker.petarmc.com/get/fish?name=user&gamemode=earth', {
 
 ### API Key Validation
 
-- Keys are validated against the `FRONTEND_API_KEY` environment variable
+- Keys are validated against the `MASTER_API_KEY` environment variable
 - Invalid keys are ignored (rate limiting still applies)
 - Keys should be kept secure and not exposed in client-side code
 

@@ -32,15 +32,19 @@ Before installing, ensure you have the following:
 
 3. **Create environment file**:
    Create a `.env` file in the backend root directory with the following variables:
-   ```env
+   ```yaml
    MONGO_URI=mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb
    PORT=10000 # optional otherwise defaults to 10000
-   RANDOM_ORG_API_KEY=your-random-org-api-key
    JWT_SECRET=your-super-secret-jwt-key
-   FRONTEND_API_KEY=your-frontend-api-key
+   MASTER_API_KEY=JI83gstEbMES1fKw65jrQgznfcopWkrO # optional but useful for testsing and admin tasks
    ALLOWED_ORIGIN=https://your-frontend-domain.com # optional otherwise will use https://tracker.petarmc.com
    RATE_LIMIT_WINDOW=5  # optional otherwise defaults to 5 minutes
    RATE_LIMIT_MAX_REQUESTS=25   # optional otherwise defaults to 25 requests per window
+   LOG_HEADERS=true # optional default false
+   LOG_REQ_BODY=true # optional default false
+   LOG_REQ_RES=true  # optional default false
+   REQUEST_LOGGER=true  # optional default false
+   SKIP_ALLOWED_ORIGIN=true   # optional default false
    ```
 
 :::caution
@@ -80,13 +84,16 @@ services:
          - "10000:10000"
       environment:
          MONGO_URI: "mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb"
-         RANDOM_ORG_API_KEY: "random-org-api-key"
-         FRONTEND_API_KEY: "frontend-api-key"
          JWT_SECRET: "your-super-secret-jwt-token"
-         ALLOWED_ORIGIN: "https://your-frontend-domain.com" # optional
-         RATE_LIMIT_WINDOW: 5  # optional otherwise defaults to 5 minutes
-         RATE_LIMIT_MAX_REQUESTS: 25   # optional otherwise defaults to 25 requests per window
-         PORT: 10000  # optional, if you change it here, change the port mapping above too
+         MASTER_API_KEY: "JI83gstEbMES1fKw65jrQgznfcopWkrO"
+         ALLOWED_ORIGIN: "https://your-frontend-domain.com"
+         RATE_LIMIT_MAX_REQUESTS: 25   
+         LOG_HEADERS: true
+         LOG_REQ_BODY: true
+         LOG_REQ_RES: true
+         REQUEST_LOGGER: true
+         SKIP_ALLOWED_ORIGIN: true
+         PORT: 10000  # if you change it here, change the port mapping above too
       restart: unless-stopped
 
 ```
@@ -101,15 +108,19 @@ docker run -d \
    --name fish-tracker-backend \
    -p 10000:10000 \
    -e MONGO_URI="mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb" \
-   -e RANDOM_ORG_API_KEY="random-org-api-key" \
-   -e FRONTEND_API_KEY="frontend-api-key" \
    -e JWT_SECRET="your-super-secret-jwt-token" \
-   # -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
-   # -e PORT=10000 \
-   # -e RATE_LIMIT_WINDOW=5 \
-   # -e RATE_LIMIT_MAX_REQUESTS=25 \
+   -e MASTER_API_KEY="JI83gstEbMES1fKw65jrQgznfcopWkrO" \
+   -e LOG_HEADERS=true \
+   -e LOG_REQ_BODY=true \
+   -e LOG_REQ_RES=true \
+   -e REQUEST_LOGGER=true \
+   -e SKIP_ALLOWED_ORIGIN=true \
+   -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
+   -e PORT=10000 \
+   -e RATE_LIMIT_WINDOW=5 \
+   -e RATE_LIMIT_MAX_REQUESTS=25 \
    --restart unless-stopped \
-   petarmc/fish-tracker-backend:1.x.x
+   petarmc/fish-tracker-backend:2.x.x
 ```
 
 ### Development Docker Images
@@ -140,9 +151,13 @@ docker run -d \
    --name fish-tracker-backend-dev \
    -p 10000:10000 \
    -e MONGO_URI="mongodb://exampleUser:examplePass@mongo.example.com:27017/fishdb" \
-   -e RANDOM_ORG_API_KEY="random-org-api-key" \
-   -e FRONTEND_API_KEY="frontend-api-key" \
    -e JWT_SECRET="your-super-secret-jwt-token" \
+   -e MASTER_API_KEY="JI83gstEbMES1fKw65jrQgznfcopWkrO" \
+   -e LOG_HEADERS=true \
+   -e LOG_REQ_BODY=true \
+   -e LOG_REQ_RES=true \
+   -e REQUEST_LOGGER=true \
+   -e SKIP_ALLOWED_ORIGIN=true \
    # -e ALLOWED_ORIGIN="https://your-frontend-domain.com" \
    # -e PORT=10000 \
    # -e RATE_LIMIT_WINDOW=5 \
