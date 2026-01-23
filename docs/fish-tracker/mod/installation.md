@@ -12,13 +12,13 @@ Follow these steps to install FishTracker on your Minecraft client.
 Before installing FishTracker, ensure you have the following mods installed:
 
 - [Fabric API](https://modrinth.com/mod/fabric-api)
-- [Cloth Config](https://modrinth.com/mod/cloth-config) (version 21.11.153 or compatible)
-- [PetarLib](https://github.com/PetarMc1/petarlib) (version v1.2 or compatible)
+- [Cloth Config](https://modrinth.com/mod/cloth-config)
+- [PetarLib](https://modrinth.com/mod/petarlib)
+- [Mod Menu](https://modrinth.com/mod/modmenu) (optional)
 
 ## Installation Steps
 
-:::note Download options
-Modrinth is coming soon! <br/>
+:::tip
 You can download development builds for each commit from the [CI](https://ci.petarmc.com/job/Fish%20Tracker%20Mod/)
 :::
 

@@ -7,8 +7,7 @@ sidebar_label: Installation
 
 ## Downloading and Installing
 
-:::note Download options
-Modrinth is comming soon! <br/>
+:::tip
 Also you can download development builds for each commit from [CI](https://ci.petarmc.com/job/PetarLib/)
 :::
 
