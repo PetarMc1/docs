@@ -3,8 +3,78 @@ title: Notifications
 sidebar_label: Notifications
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Notifications API
 
+<Tabs>
+<TabItem value="v2" label="v2">
+    
+PetarLib (v2.0.0+) provides a utility class for displaying in-game notifications to the player through the action bar (see image below). This is useful for mods that need to inform the player about events, errors, or other information.
+
+![Action Bar Notification Example](/img/actionbar.png)
+
+## Overview
+
+The `NotificationManager` class allows you to send formatted messages to the player's action bar. It supports different types of notifications (error, info and custom) Callers must supply a prefix string (may be empty) when using the info and error methods.
+
+:::note
+This class only works on the client side.
+:::
+
+## Usage
+
+### Showing Error Notifications
+
+```java
+NotificationManager.showError("An error occurred while processing your request.", "Prefix");
+```
+
+This will display: `[Prefix] An error occurred while processing your request.` in red color.
+
+### Showing Info Notifications
+
+```java
+NotificationManager.showInfo("Mod loaded successfully.", "Prefix");
+```
+
+This will display: `[Prefix] Mod loaded successfully.` in white color.
+
+### Showing Custom Notifications
+
+```java
+NotificationManager.showCustomNotification("§aCustom green message");
+```
+
+This allows you to send any formatted message directly to chat. 
+:::caution
+`showCustomNotification` does not add any prefix; use the methods (`showError`/`showInfo`) when you want the library to add prefix and default coloring.
+:::
+
+## Configuration
+You can see configuration examples above.
+
+For more information on configuring logging, see the [Javadocs](./javadocs.md).
+
+## Color codes used by the methods
+
+- Prefix is shown in yellow: `§e` (displayed as `§e[Prefix]`)
+- Error messages use red: `§c`
+- Info messages use white: `§f`
+- The custom notification support all color codes. To see the full list of Minecraft color codes, refer to the [Minecraft Color Codes](https://minecraftitemids.com/color-codes#color-codes).
+</TabItem>
+
+
+
+
+
+
+
+
+
+<TabItem value="v1" label="v1">
+    
 PetarLib provides a utility class for displaying in-game notifications to the player through the chat. This is useful for mods that need to inform the player about events, errors, or other information.
 
 ## Overview
@@ -65,3 +135,8 @@ For more information on configuring logging, see the [Javadocs](./javadocs.md).
 :::tip
 When using `showChatMessage` you can add color codes (e.g., `§a` for green, `§c` for red). To see the full list of Minecraft color codes, refer to the [Minecraft Color Codes](https://minecraftitemids.com/color-codes#color-codes).
 :::
+
+  </TabItem>
+
+
+</Tabs>

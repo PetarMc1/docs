@@ -13,7 +13,7 @@ PetarLib is a utility library mod for Minecraft Fabric, designed to provide comm
 - **Chat Pattern Matching**: System for registering regex patterns and exact matches for chat messages with custom handlers.
 - **HTTP Client Wrapper**: Wrapper around Java's HttpClient with retry logic and asynchronous support.
 - **Task Scheduling**: Scheduler for running tasks asynchronously or with delays, with built-in exception handling.
-- **Notifications**: Utility for displaying in-game notifications to the player through the chat.
+- **Notifications**: Utility for displaying in-game notifications to the player through the action bar (versions under v2.0.0 use chat notifications).
 
 ## Getting Started
 

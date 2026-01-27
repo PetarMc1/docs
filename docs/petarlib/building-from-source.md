@@ -7,7 +7,10 @@ sidebar_label: Building from Source
 
 To build PetarLib from source, follow these steps:
 
-1. Ensure you have Java 17+ and Git installed.
+1. Ensure you have Java 21+ and Git installed.
+:::warning
+Minecraft version `26.1-snapshot-1` (PetarLib v2.0.0+) and above require Java 25 and using java 21 wont work
+:::
 2. Clone the repository:
    ```bash
    git clone https://github.com/PetarMc1/PetarLib.git
