@@ -8,41 +8,58 @@ import TabItem from "@theme/TabItem";
 
 # Setup
 
-This page covers the technical setup for using PetarLib in your Fabric mod project.
+This page covers the setup for using PetarLib in your Fabric mod project.
+
+:::warning
+As of PetarLib `v2.0.0-alpha.3` the Maven coordinates changed. Use the
+`com.petarmc.petarlib:petarlib-fabric` coordinates for v2+ keep using `com.petarmc:lib` 
+for releases before `v2.0.0-alpha.3`.
+:::
 
 ## Gradle
 
 <Tabs>
   <TabItem value="groovy" label="Groovy DSL">
 
-Add the PetarMc Maven repository and the dependency in your `build.gradle`:
+Add the PetarMc Maven repository and the dependency in your `build.gradle`.
 
 ```groovy title="build.gradle"
 repositories {
-    maven {
-        url "https://maven.petarmc.com/releases"
-    }
+  maven {
+    url "https://maven.petarmc.com/releases"
+  }
 }
 
+// for versions before v2.0.0-alpha.3
 dependencies {
-    modImplementation "com.petarmc:PetarLib:x.x.x"
-    // Include other dependencies
+  modImplementation "com.petarmc:lib:x.x.x"
+}
+
+// for versions after v2.0.0-alpha.3
+dependencies {
+  modImplementation "com.petarmc.petarlib:petarlib-fabric:x.x.x"
 }
 ```
 
   </TabItem>
+
   <TabItem value="kotlin" label="Kotlin DSL">
 
 Add the PetarMc Maven repository and the dependency in your `build.gradle.kts`:
 
 ```kotlin title="build.gradle.kts"
 repositories {
-    maven("https://maven.petarmc.com/releases")
+  maven("https://maven.petarmc.com/releases")
 }
 
+// for versions before v2.0.0-alpha.3
 dependencies {
-    modImplementation("com.petarmc:PetarLib:x.x.x")
-    // Include other dependencies
+  modImplementation("com.petarmc:lib:x.x.x")
+}
+
+// for versions after v2.0.0-alpha.3
+dependencies {
+  modImplementation("com.petarmc.petarlib:petarlib-fabric:x.x.x")
 }
 ```
 
@@ -54,21 +71,31 @@ dependencies {
 Add the PetarMc Maven repository and the dependency in your `pom.xml`:
 
 ```xml title="pom.xml"
-<reositories>
-    <repository>
-        <id>petarmc</id>
-        <url>https://maven.petarmc.com/releases</url>
-    </repository>
+<repositories>
+  <repository>
+    <id>petarmc</id>
+    <url>https://maven.petarmc.com/releases</url>
+  </repository>
 </repositories>
 
+<!-- for older versions (pre v2.0.0-alpha.3) -->
 <dependencies>
-    <dependency>
-        <groupId>com.petarmc</groupId>
-        <artifactId>PetarLib</artifactId>
-        <version>x.x.x</version>
-        <scope>provided</scope>
-    </dependency>
-    <!-- Include other dependencies -->
+  <dependency>
+    <groupId>com.petarmc</groupId>
+    <artifactId>lib</artifactId>
+    <version>x.x.x</version>
+    <scope>provided</scope>
+  </dependency>
+</dependencies>
+
+<!-- for versions after v2.0.0-alpha.3 -->
+<dependencies>
+  <dependency>
+    <groupId>com.petarmc.petarlib</groupId>
+    <artifactId>petarlib-fabric</artifactId>
+    <version>x.x.x</version>
+    <scope>provided</scope>
+  </dependency>
 </dependencies>
 ```
 
@@ -96,7 +123,7 @@ Unit tests are configured with Jupiter
 
 - Run a single test class or method:
 ```bash
-.\gradlew --tests com.petarmc.lib.chat.ChatPatternMatcherTest test
+.\gradlew --tests com.petarmc.petarlib.chat.ChatPatternMatcherTest test
 ```
 
 Test reports will be generated after a test run at:

@@ -16,7 +16,7 @@ PetarLib provides a task scheduler for running asynchronous tasks or delayed tas
 ### Creating a Scheduler
 
 ```java
-import com.petarmc.lib.task.TaskScheduler;
+import com.petarmc.petarlib.task.TaskScheduler;
 
 TaskScheduler scheduler = new TaskScheduler(4); // 4 threads
 ```
@@ -41,7 +41,7 @@ scheduler.runDelayed(() -> {
 ### Shutdown
 
 ```java
-scheduler.shutdown(); // Graceful shutdown with timeout
+scheduler.shutdown(); // shutdown with timeout
 ```
 
 ## Features

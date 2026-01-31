@@ -16,7 +16,7 @@ PetarLib provides a wrapper around Java's HttpClient for simplified asynchronous
 ### Creating a Client
 
 ```java
-import com.petarmc.lib.net.HttpClientWrapper;
+import com.petarmc.petarlib.net.HttpClientWrapper;
 
 HttpClientWrapper client = new HttpClientWrapper(3); // max 3 retries
 ```

@@ -23,7 +23,7 @@ Key classes:
 ### Creating a Matcher
 
 ```java
-import com.petarmc.lib.chat.ChatPatternMatcher;
+import com.petarmc.petarlib.chat.ChatPatternMatcher;
 
 ChatPatternMatcher matcher = new ChatPatternMatcher();
 ```

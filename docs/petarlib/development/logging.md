@@ -21,8 +21,8 @@ The logging system consists of:
 ### Creating a Logger
 
 ```java
-import com.petarmc.lib.log.PLog;
-import com.petarmc.lib.log.PLogger;
+import com.petarmc.petarlib.log.PLog;
+import com.petarmc.petarlib.log.PLogger;
 
 PLogger logger = new PLog("MyMod");
 ```
@@ -44,8 +44,8 @@ logger.error("Error with exception", exception);
 Configure logging globally via `LogConfig`:
 
 ```java
-import com.petarmc.lib.log.LogConfig;
-import com.petarmc.lib.log.LogLevel;
+import com.petarmc.petarlib.log.LogConfig;
+import com.petarmc.petarlib.log.LogLevel;
 
 LogConfig.globalLevel = LogLevel.DEBUG;
 LogConfig.logToFile = true;
