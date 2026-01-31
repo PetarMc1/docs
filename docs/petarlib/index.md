@@ -29,6 +29,6 @@ Explore the API for each module:
 - [Chat Pattern Matching](development/chat.md)
 - [HTTP Client](development/net.md)
 - [Task Scheduling](development/task.md)
-- [Notifications](development/notifications.md)
+- [Notifications](development/notifications.mdx)
 
 For detailed API documentation, see the [Javadocs](https://jd.petarmc.com).
