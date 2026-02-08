@@ -26,7 +26,7 @@ Add the PetarMc Maven repository and the dependency in your `build.gradle`.
 ```groovy title="build.gradle"
 repositories {
   maven {
-    url "https://maven.petarmc.com/releases"
+    url "https://repo.petarmc.com/repository/maven-public/"
   }
 }
 
@@ -49,7 +49,7 @@ Add the PetarMc Maven repository and the dependency in your `build.gradle.kts`:
 
 ```kotlin title="build.gradle.kts"
 repositories {
-  maven("https://maven.petarmc.com/releases")
+  maven("https://repo.petarmc.com/repository/maven-public/")
 }
 
 // for versions before v2.0.0-alpha.3
@@ -74,7 +74,7 @@ Add the PetarMc Maven repository and the dependency in your `pom.xml`:
 <repositories>
   <repository>
     <id>petarmc</id>
-    <url>https://maven.petarmc.com/releases</url>
+    <url>https://repo.petarmc.com/repository/maven-public/</url>
   </repository>
 </repositories>
 
