@@ -1,0 +1,87 @@
+---
+title: Setup
+sidebar_label: Setup
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Setup
+
+This page covers the setup for using PetarLib in your Spigot/Paper project(s).
+
+## Gradle
+
+<Tabs>
+  <TabItem value="groovy" label="Groovy DSL">
+
+Add the PetarMc Maven repository and the dependency in your `build.gradle`.
+
+```groovy title="build.gradle"
+repositories {
+  maven {
+    url "https://repo.petarmc.com/repository/maven-public/"
+  }
+}
+
+dependencies {
+  modImplementation "com.petarmc.petarlib:petarlib-spigot:x.x.x"
+}
+```
+
+  </TabItem>
+
+  <TabItem value="kotlin" label="Kotlin DSL">
+
+Add the PetarMc Maven repository and the dependency in your `build.gradle.kts`:
+
+```kotlin title="build.gradle.kts"
+repositories {
+  maven("https://repo.petarmc.com/repository/maven-public/")
+}
+
+dependencies {
+  modImplementation("com.petarmc.petarlib:petarlib-spigot:x.x.x")
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Maven
+
+Add the Petar_mv Maven repository and the dependency in your `pom.xml`:
+
+```xml title="pom.xml"
+<repositories>
+  <repository>
+    <id>petarmc</id>
+    <url>https://repo.petarmc.com/repository/maven-public/</url>
+  </repository>
+</repositories>
+
+<dependencies>
+  <dependency>
+    <groupId>com.petarmc.petarlib</groupId>
+    <artifactId>petarlib-spigot</artifactId>
+    <version>x.x.x</version>
+    <scope>provided</scope>
+  </dependency>
+</dependencies>
+```
+
+## plugin.yml
+
+Make sure to include the dependency in your `plugin.yml`:
+
+```yaml title="plugin.yml"
+name: MyPlugin
+version: '1.0.0'
+main: com.petarmc.myplugin.Main
+api-version: '1.21'
+prefix: myplugin
+authors: [ Petar_mc ]
+website: https://petarmc.com
+depend: 
+  - PetarLib
+```

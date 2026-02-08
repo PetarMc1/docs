@@ -135,6 +135,26 @@ const sidebars: SidebarsConfig = {
     "duration-parser/usage",
     "duration-parser/examples",
   ],
+
+  petarLib_spigot: [
+    "petarlib-spigot/index",
+    "petarlib-spigot/building-from-source",
+    {
+      type: "category",
+      label: "Development",
+      items: [
+        "petarlib-spigot/development/setup",
+        "petarlib-spigot/development/javadocs",
+        "petarlib-spigot/development/net",
+        "petarlib-spigot/development/task",
+        "petarlib-spigot/development/notifications",
+      ],
+       link: {
+            type: "generated-index",
+            slug: "/petarlib-spigot/development",
+          },
+    },
+  ],
 };
 
 export default sidebars;

@@ -9,8 +9,7 @@ Javadocs are the official API documentation for PetarLib, generated from the sou
 
 ## Online Javadocs
 
-The latest Javadocs are available at: [https://jd.petarmc.com/petarlib](https://jd.petarmc.com/petarlib)
-
+The latest Javadocs are available at: [https://jd.petarmc.com/petarlib-spigot](https://jd.petarmc.com/petarlib-spigot)
 ## Generating Javadocs Locally
 
 If you want to generate the Javadocs locally from the source code:
@@ -22,5 +21,3 @@ If you want to generate the Javadocs locally from the source code:
    ```
 3. The generated documentation will be in the `build/docs` directory.
 4. Open `javadoc/index.html` in your web browser to view the documentation.
-
-This is useful for development or offline access.

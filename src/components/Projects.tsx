@@ -24,6 +24,12 @@ const projects: Project[] = [
     link: "/petarlib",
   },
   {
+    title: "PetarLib for Spigot",
+    description: "Library for all my plugins.",
+    repo: "PetarMc1/PetarLib-Spigot",
+    link: "/petarlib-spigot",
+  },
+  {
     title: "Minecraft Items API v2",
     description: "Documentation for the Minecraft Items API v2 project.",
     repo: "PetarMc1/minecraft-items-api-v2",
