@@ -35,7 +35,7 @@ Currently im not planning to publish the plugin to Modrinth or other platforms
 
 ## API Documentation
 Explore the API for each module:
-- [Notifications](development/notifications.mdx)
-- [HTTP Client](development/net.mdx)
+- [Notifications](development/notifications.md)
+- [HTTP Client](development/net.md)
 - [Task Scheduling](development/task.md)
-For detailed API documentation, see the [Javadocs](./javadocs.md).
+For detailed API documentation, see the [Javadocs](development/javadocs.md).
