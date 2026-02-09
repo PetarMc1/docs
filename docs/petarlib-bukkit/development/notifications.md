@@ -25,5 +25,5 @@ NotificationManager.sendChatNotif("§aThis is a chat notification!", player);
 
 
 ## Color codes used by the methods
-For now adding support for MiniMessage would mean giving up Spigot support. So for now the API uses Minecraft color codes 
+The API uses Minecraft color codes 
 (e.g., `§a` for green). To see the full list of Minecraft color codes, refer to the [Minecraft Color Codes](https://minecraftitemids.com/color-codes#color-codes).

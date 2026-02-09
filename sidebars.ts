@@ -136,22 +136,22 @@ const sidebars: SidebarsConfig = {
     "duration-parser/examples",
   ],
 
-  petarLib_spigot: [
-    "petarlib-spigot/index",
-    "petarlib-spigot/building-from-source",
+  petarLib_bukkit: [
+    "petarlib-bukkit/index",
+    "petarlib-bukkit/building-from-source",
     {
       type: "category",
       label: "Development",
       items: [
-        "petarlib-spigot/development/setup",
-        "petarlib-spigot/development/javadocs",
-        "petarlib-spigot/development/net",
-        "petarlib-spigot/development/task",
-        "petarlib-spigot/development/notifications",
+        "petarlib-bukkit/development/setup",
+        "petarlib-bukkit/development/javadocs",
+        "petarlib-bukkit/development/net",
+        "petarlib-bukkit/development/task",
+        "petarlib-bukkit/development/notifications",
       ],
        link: {
             type: "generated-index",
-            slug: "/petarlib-spigot/development",
+            slug: "/petarlib-bukkit/development",
           },
     },
   ],

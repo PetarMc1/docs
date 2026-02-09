@@ -6,7 +6,7 @@ sidebar_label: Task Scheduling
 # Task Scheduling API
 
 :::warning
-This API is copied from PetarLib for Fabric and may not be fully functional in the Spigot version. The only changes were made are
+This API is copied from PetarLib for Fabric and may not be fully functional in the Bukkit version. The only changes were made are
 related to logging.
 :::
 
