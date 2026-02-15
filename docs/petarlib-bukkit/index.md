@@ -4,12 +4,6 @@ sidebar_label: Introduction
 ---
 
 # PetarLib but for Bukkit
-:::caution
-Bukkit doesnt have the option to send messages
-in the action bar without using NMS (`net.minecraft.server`). Instad PetarLib uses the spigot message sender
-(`p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));`)
-This means that the action bar notifications may not work on CraftBukkit servers!
-:::
 PetarLib is a utility library plugin. It provides common functionalities/listeners for plugins developed by Petar_mc.
 
 ## Features
@@ -26,11 +20,10 @@ PetarLib-Bukkit is still in development, and the API may change without deprecat
 
 To use PetarLib in your plugin project, add it as a dependency in your `plugin.yml` and include the JAR in your build path. For more details, see the [Developers](development/setup.mdx) guide.
 
-For server owners, simply download the latest release from the [Github Releases](https://github.com/PetarMc1/PetarLib-Bukkit/releases)
-and place the JAR file in your server's `plugins` directory.
+For server owners, check [installation](installation.md) for instructions on how to install the plugin on your server.
 
 :::note
-Currently im not planning to publish the plugin to Modrinth or other platforms 
+Currently im not planning to publish the plugin to Modrinth or other platforms.
 :::
 
 ## API Documentation
@@ -38,4 +31,5 @@ Explore the API for each module:
 - [Notifications](development/notifications.md)
 - [HTTP Client](development/net.md)
 - [Task Scheduling](development/task.md)
+- [Cooldowns](development/cooldowns.md)
 For detailed API documentation, see the [Javadocs](development/javadocs.md).

@@ -138,6 +138,10 @@ const sidebars: SidebarsConfig = {
 
   petarLib_bukkit: [
     "petarlib-bukkit/index",
+    "petarlib-bukkit/installation",
+    "petarlib-bukkit/commands",
+    "petarlib-bukkit/config",
+    "petarlib-bukkit/placeholders",
     "petarlib-bukkit/building-from-source",
     {
       type: "category",
