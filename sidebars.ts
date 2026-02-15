@@ -149,8 +149,10 @@ const sidebars: SidebarsConfig = {
       items: [
         "petarlib-bukkit/development/setup",
         "petarlib-bukkit/development/javadocs",
+        "petarlib-bukkit/development/servercheck",
         "petarlib-bukkit/development/net",
         "petarlib-bukkit/development/task",
+        "petarlib-bukkit/development/cooldowns",
         "petarlib-bukkit/development/notifications",
       ],
        link: {
