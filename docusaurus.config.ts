@@ -74,26 +74,26 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      // links: [
-      //   {
-      //     title: "Community",
-      //     items: [
-      //       {
-      //         label: "Discord",
-      //         href: "https://discord.gg/Uah2dNRhFV",
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: "Other",
-      //     items: [
-      //       {
-      //         label: "Main site",
-      //         href: "https://petarmc.com",
-      //       },
-      //     ],
-      //   },
-      // ],
+      links: [
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Discord",
+              href: "https://discord.gg/Vb263HmsPq",
+            },
+          ],
+        },
+        // {
+        //   title: "Other",
+        //   items: [
+        //     {
+        //       label: "Main site",
+        //       href: "https://petarmc.com",
+        //     },
+        //   ],
+        // },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Petar_mc. Built with Docusaurus.`,
     },
     prism: {
