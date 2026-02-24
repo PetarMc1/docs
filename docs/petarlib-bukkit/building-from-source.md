@@ -15,7 +15,7 @@ To build PetarLib from source, follow these steps:
    ```
 3. Build using Gradle:
    ```bash
-   ./gradlew build
+   ./gradlew shadowJar
    ```
 4. The built plugin will be in `build/libs/`.
 

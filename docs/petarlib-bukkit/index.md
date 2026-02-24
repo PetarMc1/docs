@@ -22,14 +22,10 @@ To use PetarLib in your plugin project, add it as a dependency in your `plugin.y
 
 For server owners, check [installation](installation.md) for instructions on how to install the plugin on your server.
 
-:::note
-Currently im not planning to publish the plugin to Modrinth or other platforms.
-:::
-
 ## API Documentation
 Explore the API for each module:
 - [Notifications](development/notifications.md)
 - [HTTP Client](development/net.md)
 - [Task Scheduling](development/task.md)
 - [Cooldowns](development/cooldowns.md)
-For detailed API documentation, see the [Javadocs](development/javadocs.md).
+- For detailed API documentation, see the [Javadocs](development/javadocs.md).
